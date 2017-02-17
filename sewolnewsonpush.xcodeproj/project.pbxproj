@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70F433B21E441E4F00356145 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433B11E441E4F00356145 /* AppDelegate.swift */; };
+		70F433B41E441E4F00356145 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433B31E441E4F00356145 /* ViewController.swift */; };
+		70F433B71E441E4F00356145 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F433B51E441E4F00356145 /* Main.storyboard */; };
+		70F433B91E441E4F00356145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70F433B81E441E4F00356145 /* Assets.xcassets */; };
+		70F433BC1E441E4F00356145 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F433BA1E441E4F00356145 /* LaunchScreen.storyboard */; };
+		70F433C71E441E4F00356145 /* sewolnewsonpushTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433C61E441E4F00356145 /* sewolnewsonpushTests.swift */; };
+		70F433D21E441E4F00356145 /* sewolnewsonpushUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433D11E441E4F00356145 /* sewolnewsonpushUITests.swift */; };
+		70F433EF1E44213700356145 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433E21E44213700356145 /* DataModel.swift */; };
+		70F433F01E44213700356145 /* DataTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433E31E44213700356145 /* DataTag.swift */; };
+		70F433F11E44213700356145 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433E51E44213700356145 /* ImageViewController.swift */; };
+		70F433F21E44213700356145 /* MainImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433E61E44213700356145 /* MainImageCell.swift */; };
+		70F433F31E44213700356145 /* MainLinkImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433E71E44213700356145 /* MainLinkImageCell.swift */; };
+		70F433F41E44213700356145 /* MainNomalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433E81E44213700356145 /* MainNomalCell.swift */; };
+		70F433F51E44213700356145 /* MainShortCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433E91E44213700356145 /* MainShortCell.swift */; };
+		70F433F61E44213700356145 /* notisetting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70F433EA1E44213700356145 /* notisetting.plist */; };
+		70F433F71E44213700356145 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433EB1E44213700356145 /* ReportViewController.swift */; };
+		70F433F81E44213700356145 /* SessionLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433EC1E44213700356145 /* SessionLogin.swift */; };
+		70F433F91E44213700356145 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433ED1E44213700356145 /* SettingViewController.swift */; };
+		70F433FA1E44213700356145 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433EE1E44213700356145 /* WebViewController.swift */; };
+		70F433FD1E44214700356145 /* WindowsAzureMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F433FB1E44214700356145 /* WindowsAzureMessaging.framework */; };
+		70F433FE1E44214700356145 /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F433FC1E44214700356145 /* WindowsAzureMobileServices.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70F433C31E441E4F00356145 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70F433A61E441E4F00356145 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70F433AD1E441E4F00356145;
+			remoteInfo = sewolnewsonpush;
+		};
+		70F433CE1E441E4F00356145 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70F433A61E441E4F00356145 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70F433AD1E441E4F00356145;
+			remoteInfo = sewolnewsonpush;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		70F433AE1E441E4F00356145 /* 뉴스온세월호.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "뉴스온세월호.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70F433B11E441E4F00356145 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		70F433B31E441E4F00356145 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		70F433B61E441E4F00356145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		70F433B81E441E4F00356145 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70F433BB1E441E4F00356145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		70F433BD1E441E4F00356145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70F433C21E441E4F00356145 /* sewolnewsonpushTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sewolnewsonpushTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70F433C61E441E4F00356145 /* sewolnewsonpushTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sewolnewsonpushTests.swift; sourceTree = "<group>"; };
+		70F433C81E441E4F00356145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70F433CD1E441E4F00356145 /* sewolnewsonpushUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sewolnewsonpushUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70F433D11E441E4F00356145 /* sewolnewsonpushUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sewolnewsonpushUITests.swift; sourceTree = "<group>"; };
+		70F433D31E441E4F00356145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70F433DF1E441ECA00356145 /* sewolnewsonpush.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sewolnewsonpush.entitlements; sourceTree = "<group>"; };
+		70F433E21E44213700356145 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		70F433E31E44213700356145 /* DataTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTag.swift; sourceTree = "<group>"; };
+		70F433E41E44213700356145 /* HubInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HubInfo.h; sourceTree = "<group>"; };
+		70F433E51E44213700356145 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		70F433E61E44213700356145 /* MainImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainImageCell.swift; sourceTree = "<group>"; };
+		70F433E71E44213700356145 /* MainLinkImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLinkImageCell.swift; sourceTree = "<group>"; };
+		70F433E81E44213700356145 /* MainNomalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNomalCell.swift; sourceTree = "<group>"; };
+		70F433E91E44213700356145 /* MainShortCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainShortCell.swift; sourceTree = "<group>"; };
+		70F433EA1E44213700356145 /* notisetting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = notisetting.plist; sourceTree = "<group>"; };
+		70F433EB1E44213700356145 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		70F433EC1E44213700356145 /* SessionLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionLogin.swift; sourceTree = "<group>"; };
+		70F433ED1E44213700356145 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		70F433EE1E44213700356145 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		70F433FB1E44214700356145 /* WindowsAzureMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMessaging.framework; sourceTree = "<group>"; };
+		70F433FC1E44214700356145 /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70F433AB1E441E4F00356145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70F433FE1E44214700356145 /* WindowsAzureMobileServices.framework in Frameworks */,
+				70F433FD1E44214700356145 /* WindowsAzureMessaging.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70F433BF1E441E4F00356145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70F433CA1E441E4F00356145 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		709228F01E4AD01000902D45 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				70F433E61E44213700356145 /* MainImageCell.swift */,
+				70F433E71E44213700356145 /* MainLinkImageCell.swift */,
+				70F433E81E44213700356145 /* MainNomalCell.swift */,
+				70F433E91E44213700356145 /* MainShortCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		709228F11E4AD02900902D45 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				70F433E21E44213700356145 /* DataModel.swift */,
+				70F433E31E44213700356145 /* DataTag.swift */,
+				70F433EC1E44213700356145 /* SessionLogin.swift */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		709228F21E4AD03C00902D45 /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				70F433EA1E44213700356145 /* notisetting.plist */,
+			);
+			name = plist;
+			sourceTree = "<group>";
+		};
+		709228F31E4AD07C00902D45 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				70F433B31E441E4F00356145 /* ViewController.swift */,
+				70F433EB1E44213700356145 /* ReportViewController.swift */,
+				70F433ED1E44213700356145 /* SettingViewController.swift */,
+				70F433EE1E44213700356145 /* WebViewController.swift */,
+				70F433E51E44213700356145 /* ImageViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		70F433A51E441E4F00356145 = {
+			isa = PBXGroup;
+			children = (
+				70F433B01E441E4F00356145 /* sewolnewsonpush */,
+				70F433C51E441E4F00356145 /* sewolnewsonpushTests */,
+				70F433D01E441E4F00356145 /* sewolnewsonpushUITests */,
+				70F433AF1E441E4F00356145 /* Products */,
+				70F433FB1E44214700356145 /* WindowsAzureMessaging.framework */,
+				70F433FC1E44214700356145 /* WindowsAzureMobileServices.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		70F433AF1E441E4F00356145 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70F433AE1E441E4F00356145 /* 뉴스온세월호.app */,
+				70F433C21E441E4F00356145 /* sewolnewsonpushTests.xctest */,
+				70F433CD1E441E4F00356145 /* sewolnewsonpushUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70F433B01E441E4F00356145 /* sewolnewsonpush */ = {
+			isa = PBXGroup;
+			children = (
+				709228F31E4AD07C00902D45 /* Controllers */,
+				709228F21E4AD03C00902D45 /* plist */,
+				709228F11E4AD02900902D45 /* DataModel */,
+				709228F01E4AD01000902D45 /* Cells */,
+				70F433B11E441E4F00356145 /* AppDelegate.swift */,
+				70F433B51E441E4F00356145 /* Main.storyboard */,
+				70F433BA1E441E4F00356145 /* LaunchScreen.storyboard */,
+				70F433E41E44213700356145 /* HubInfo.h */,
+				70F433B81E441E4F00356145 /* Assets.xcassets */,
+				70F433DF1E441ECA00356145 /* sewolnewsonpush.entitlements */,
+				70F433BD1E441E4F00356145 /* Info.plist */,
+			);
+			path = sewolnewsonpush;
+			sourceTree = "<group>";
+		};
+		70F433C51E441E4F00356145 /* sewolnewsonpushTests */ = {
+			isa = PBXGroup;
+			children = (
+				70F433C61E441E4F00356145 /* sewolnewsonpushTests.swift */,
+				70F433C81E441E4F00356145 /* Info.plist */,
+			);
+			path = sewolnewsonpushTests;
+			sourceTree = "<group>";
+		};
+		70F433D01E441E4F00356145 /* sewolnewsonpushUITests */ = {
+			isa = PBXGroup;
+			children = (
+				70F433D11E441E4F00356145 /* sewolnewsonpushUITests.swift */,
+				70F433D31E441E4F00356145 /* Info.plist */,
+			);
+			path = sewolnewsonpushUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70F433AD1E441E4F00356145 /* sewolnewsonpush */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70F433D61E441E4F00356145 /* Build configuration list for PBXNativeTarget "sewolnewsonpush" */;
+			buildPhases = (
+				70F433AA1E441E4F00356145 /* Sources */,
+				70F433AB1E441E4F00356145 /* Frameworks */,
+				70F433AC1E441E4F00356145 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sewolnewsonpush;
+			productName = sewolnewsonpush;
+			productReference = 70F433AE1E441E4F00356145 /* 뉴스온세월호.app */;
+			productType = "com.apple.product-type.application";
+		};
+		70F433C11E441E4F00356145 /* sewolnewsonpushTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70F433D91E441E4F00356145 /* Build configuration list for PBXNativeTarget "sewolnewsonpushTests" */;
+			buildPhases = (
+				70F433BE1E441E4F00356145 /* Sources */,
+				70F433BF1E441E4F00356145 /* Frameworks */,
+				70F433C01E441E4F00356145 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70F433C41E441E4F00356145 /* PBXTargetDependency */,
+			);
+			name = sewolnewsonpushTests;
+			productName = sewolnewsonpushTests;
+			productReference = 70F433C21E441E4F00356145 /* sewolnewsonpushTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		70F433CC1E441E4F00356145 /* sewolnewsonpushUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70F433DC1E441E4F00356145 /* Build configuration list for PBXNativeTarget "sewolnewsonpushUITests" */;
+			buildPhases = (
+				70F433C91E441E4F00356145 /* Sources */,
+				70F433CA1E441E4F00356145 /* Frameworks */,
+				70F433CB1E441E4F00356145 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70F433CF1E441E4F00356145 /* PBXTargetDependency */,
+			);
+			name = sewolnewsonpushUITests;
+			productName = sewolnewsonpushUITests;
+			productReference = 70F433CD1E441E4F00356145 /* sewolnewsonpushUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70F433A61E441E4F00356145 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Daeho;
+				TargetAttributes = {
+					70F433AD1E441E4F00356145 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = D9RD49DXLL;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					70F433C11E441E4F00356145 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = D9RD49DXLL;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 70F433AD1E441E4F00356145;
+					};
+					70F433CC1E441E4F00356145 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = D9RD49DXLL;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 70F433AD1E441E4F00356145;
+					};
+				};
+			};
+			buildConfigurationList = 70F433A91E441E4F00356145 /* Build configuration list for PBXProject "sewolnewsonpush" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 70F433A51E441E4F00356145;
+			productRefGroup = 70F433AF1E441E4F00356145 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70F433AD1E441E4F00356145 /* sewolnewsonpush */,
+				70F433C11E441E4F00356145 /* sewolnewsonpushTests */,
+				70F433CC1E441E4F00356145 /* sewolnewsonpushUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70F433AC1E441E4F00356145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70F433BC1E441E4F00356145 /* LaunchScreen.storyboard in Resources */,
+				70F433B91E441E4F00356145 /* Assets.xcassets in Resources */,
+				70F433B71E441E4F00356145 /* Main.storyboard in Resources */,
+				70F433F61E44213700356145 /* notisetting.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70F433C01E441E4F00356145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70F433CB1E441E4F00356145 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70F433AA1E441E4F00356145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70F433F21E44213700356145 /* MainImageCell.swift in Sources */,
+				70F433B41E441E4F00356145 /* ViewController.swift in Sources */,
+				70F433F41E44213700356145 /* MainNomalCell.swift in Sources */,
+				70F433B21E441E4F00356145 /* AppDelegate.swift in Sources */,
+				70F433F81E44213700356145 /* SessionLogin.swift in Sources */,
+				70F433F51E44213700356145 /* MainShortCell.swift in Sources */,
+				70F433F11E44213700356145 /* ImageViewController.swift in Sources */,
+				70F433F01E44213700356145 /* DataTag.swift in Sources */,
+				70F433F31E44213700356145 /* MainLinkImageCell.swift in Sources */,
+				70F433F71E44213700356145 /* ReportViewController.swift in Sources */,
+				70F433EF1E44213700356145 /* DataModel.swift in Sources */,
+				70F433FA1E44213700356145 /* WebViewController.swift in Sources */,
+				70F433F91E44213700356145 /* SettingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70F433BE1E441E4F00356145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70F433C71E441E4F00356145 /* sewolnewsonpushTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70F433C91E441E4F00356145 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70F433D21E441E4F00356145 /* sewolnewsonpushUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70F433C41E441E4F00356145 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70F433AD1E441E4F00356145 /* sewolnewsonpush */;
+			targetProxy = 70F433C31E441E4F00356145 /* PBXContainerItemProxy */;
+		};
+		70F433CF1E441E4F00356145 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70F433AD1E441E4F00356145 /* sewolnewsonpush */;
+			targetProxy = 70F433CE1E441E4F00356145 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		70F433B51E441E4F00356145 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70F433B61E441E4F00356145 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		70F433BA1E441E4F00356145 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70F433BB1E441E4F00356145 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		70F433D41E441E4F00356145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Push Services: com.yeho.sewolnewsonpush";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		70F433D51E441E4F00356145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Push Services: com.yeho.sewolnewsonpush";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		70F433D71E441E4F00356145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sewolnewsonpush/sewolnewsonpush.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Push Services: com.yeho.sewolnewsonpush";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = D9RD49DXLL;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = sewolnewsonpush/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeho.sewolnewsonpush;
+				PRODUCT_NAME = "뉴스온세월호";
+				SWIFT_OBJC_BRIDGING_HEADER = Sewol_Bridging_header.h;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		70F433D81E441E4F00356145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sewolnewsonpush/sewolnewsonpush.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Push Services: com.yeho.sewolnewsonpush";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = D9RD49DXLL;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = sewolnewsonpush/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeho.sewolnewsonpush;
+				PRODUCT_NAME = "뉴스온세월호";
+				SWIFT_OBJC_BRIDGING_HEADER = Sewol_Bridging_header.h;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		70F433DA1E441E4F00356145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = D9RD49DXLL;
+				INFOPLIST_FILE = sewolnewsonpushTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeho.sewolnewsonpushTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sewolnewsonpush.app/sewolnewsonpush";
+			};
+			name = Debug;
+		};
+		70F433DB1E441E4F00356145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = D9RD49DXLL;
+				INFOPLIST_FILE = sewolnewsonpushTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeho.sewolnewsonpushTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sewolnewsonpush.app/sewolnewsonpush";
+			};
+			name = Release;
+		};
+		70F433DD1E441E4F00356145 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = D9RD49DXLL;
+				INFOPLIST_FILE = sewolnewsonpushUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeho.sewolnewsonpushUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = sewolnewsonpush;
+			};
+			name = Debug;
+		};
+		70F433DE1E441E4F00356145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = D9RD49DXLL;
+				INFOPLIST_FILE = sewolnewsonpushUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeho.sewolnewsonpushUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = sewolnewsonpush;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70F433A91E441E4F00356145 /* Build configuration list for PBXProject "sewolnewsonpush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70F433D41E441E4F00356145 /* Debug */,
+				70F433D51E441E4F00356145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70F433D61E441E4F00356145 /* Build configuration list for PBXNativeTarget "sewolnewsonpush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70F433D71E441E4F00356145 /* Debug */,
+				70F433D81E441E4F00356145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70F433D91E441E4F00356145 /* Build configuration list for PBXNativeTarget "sewolnewsonpushTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70F433DA1E441E4F00356145 /* Debug */,
+				70F433DB1E441E4F00356145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70F433DC1E441E4F00356145 /* Build configuration list for PBXNativeTarget "sewolnewsonpushUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70F433DD1E441E4F00356145 /* Debug */,
+				70F433DE1E441E4F00356145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70F433A61E441E4F00356145 /* Project object */;
+}
