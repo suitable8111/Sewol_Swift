@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     // IBOutlets..
+    @IBOutlet weak var pushView: UIView!
     
     @IBOutlet weak var sideView:                UIView!         //알림설정, 웹으로 가기, 제보하기 기능을 보여주는 사이드 뷰
     @IBOutlet weak var noticeView:              UIView!         //상단 공지사항을 알려주는 UIView
@@ -24,6 +25,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var totalPeopleLb:           UILabel!        //전체 앱 등록 된 사람수를 보는 라벨
     @IBOutlet weak var sideTotalPeopleLb:       UILabel!        //사이드 뷰에 있는 앱 등록 된 사람수를 보는 라벨
     @IBOutlet weak var progressView:            UILabel!        //서버쪽 데이터가 받아와질때까지 진행하는 UILabel 데이터가 모두 받아와 지면 종료된다.
+    @IBOutlet weak var pushMsgLabel: UILabel!
+    @IBOutlet weak var pushMsgTime: UILabel!
+    
     
     @IBOutlet weak var hiddenViewBtn:           UIButton!       //사이드 뷰가 켜질때, 데이터를 가져올 때 나타나는 버튼, 모든 처리가 끝나면 사라진다.
     @IBOutlet weak var noticeNeverShowBtn:      UIButton!       //상단 공지사항을 절때 보여주지 않도록하는 버튼
@@ -40,6 +44,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     // Values..
+    
+    
     var searchPosAry:           NSMutableArray?                 //검색시 데이터를 받아오는 배열
     var datadic:                NSMutableArray?                 //실제 세월호 테이블 뷰에 담겨진 데이터들
     var sectionAry:             NSMutableArray?                 //섹션 (날짜)를 저장하는 배열
@@ -80,7 +86,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //self.hiddenViewBtn.isEnabled = false
         //self.hiddenViewBtn.isUserInteractionEnabled = false
-        //self.hiddenViewBtn.isHidden = false
+        
         
         
         
@@ -128,47 +134,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         print("Not Access Notice")
                     }
                 }
-                
-                dataModel.parseJSONResults{(json) -> Void in
-                    if json != nil {
-                        if let json = json,
-                        let list = json["list"] as? NSArray {
-                            
-                            
-                            var ary = NSMutableArray()
-                            self.datadic = NSMutableArray()
-                            self.sectionAry = NSMutableArray()
-                            
-                            var preDateText = self.DatetoString(date: Date(timeIntervalSince1970: Double((list[0] as! NSDictionary)["created_time"] as! Int64)))
-                            
-                            for element in 0..<(list.count-1) {
-                                let dateString = self.DatetoString(date: Date(timeIntervalSince1970: Double((list[element] as! NSDictionary)["created_time"] as! Int64)))
-                                ary.add(list[element] as! NSDictionary)
-
-                                if preDateText != dateString {
-                                    self.datadic?.add(ary)
-                                    self.sectionAry?.add(dateString)
-                                    ary = NSMutableArray()
-                                }
-                                preDateText = dateString
-                                
-                                //print(dateString)
-                            }
-                            
-                            DispatchQueue.main.async {
-                                
-                                //self.hiddenViewBtn.layer.zPosition = 0
-                                //self.mTableview.layer.zPosition = 1
-                                self.hiddenViewBtn.alpha = 0.0
-                                self.progressView.isHidden = true
-                                self.mTableview.reloadData()
-                                self.mTableview.tableViewScrollToBottom(animated: false)
-                            }
-                        }
-                    }else {
-                        print("데이터 가져오기 실패")
-                    }
-                }
+                self.parseData(dataModel: dataModel)
             }else {
                 print("Login Error")
                 self.progressView.isHidden = true
@@ -708,6 +674,77 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     // MARK : FUNCS
     //검색된 스트링만의 색을 변형시키는 함수
+    
+    func reloadPushData (data: [AnyHashable : Any]){
+        
+        let list = data["aps"] as! Dictionary<String, AnyObject>
+        self.pushMsgLabel.text = list["alert"] as? String
+        let dateString = DatetoStringAA(date: Date())
+        
+//        let calendar = NSCalendar.current
+//        
+//        let hour = calendar.component(.hour, from: date)
+//        let minute = calendar.component(.minute, from: date)
+        
+        self.pushMsgTime.text = dateString
+        UIView.animate(withDuration: 1.0, animations: {
+            self.pushView.transform = CGAffineTransform(translationX: 0.0 , y: self.pushView.frame.height);
+        }, completion: { error in
+            UIView.animate(withDuration: 1.0, delay: 3.0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+                self.pushView.transform = CGAffineTransform(translationX: 0.0 , y: 0.0);
+            }, completion: nil)
+            
+            //ReloadData
+            self.progressView.isHidden = true
+            self.hiddenViewBtn.isHidden = false
+            let dataModel = DataModel()
+            self.parseData(dataModel: dataModel)
+        })
+        
+        
+    }
+    func parseData (dataModel : DataModel) {
+        dataModel.parseJSONResults{(json) -> Void in
+            if json != nil {
+                if let json = json,
+                    let list = json["list"] as? NSArray {
+                    
+                    
+                    var ary = NSMutableArray()
+                    self.datadic = NSMutableArray()
+                    self.sectionAry = NSMutableArray()
+                    
+                    var preDateText = self.DatetoString(date: Date(timeIntervalSince1970: Double((list[0] as! NSDictionary)["created_time"] as! Int64)))
+                    
+                    for element in 0..<(list.count-1) {
+                        let dateString = self.DatetoString(date: Date(timeIntervalSince1970: Double((list[element] as! NSDictionary)["created_time"] as! Int64)))
+                        ary.add(list[element] as! NSDictionary)
+                        
+                        if preDateText != dateString {
+                            self.datadic?.add(ary)
+                            self.sectionAry?.add(dateString)
+                            ary = NSMutableArray()
+                        }
+                        preDateText = dateString
+                        
+                        //print(dateString)
+                    }
+                    
+                    DispatchQueue.main.async {
+                        
+                        //self.hiddenViewBtn.layer.zPosition = 0
+                        //self.mTableview.layer.zPosition = 1
+                        self.hiddenViewBtn.alpha = 0.0
+                        self.progressView.isHidden = true
+                        self.mTableview.reloadData()
+                        self.mTableview.tableViewScrollToBottom(animated: false)
+                    }
+                }
+            }else {
+                print("데이터 가져오기 실패")
+            }
+        }
+    }
     func changeTint(cellString : NSString, searchString : NSString, index : IndexPath) -> NSMutableAttributedString {
         let attrString = NSMutableAttributedString(string: cellString as String, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 15.0)])
         let paragraphStyle = NSMutableParagraphStyle()

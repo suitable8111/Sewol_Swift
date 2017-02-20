@@ -22,7 +22,7 @@ class SessionLogin {
         
         //let json : [String : Any] = ["company_id" : "1" , "phone" : deviceID, "device_id" : deviceID]
         
-        let url = URL(string: "http://1.234.70.19:8080/SEWOL/mobile/user/loginByPhone.do")
+        let url = URL(string: DataTag.URL_LOGIN)
 //        var request = URLRequest(url: url!)
         
         let jar = HTTPCookieStorage.shared
@@ -97,7 +97,7 @@ class SessionLogin {
 
     func deviceRegister(deviceID : String, completionHandler : @escaping ((_ isSussess : Bool) -> Void)){
         
-        let url = URL(string: "http://1.234.70.19:8080/SEWOL/mobile/device/save.do")
+        let url = URL(string: DataTag.URL_DIVICE_SAVE)
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
         

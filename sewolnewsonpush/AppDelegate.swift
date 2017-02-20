@@ -9,7 +9,7 @@ import UserNotifications
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenterDelegate{
     
     
     var window: UIWindow?
@@ -25,22 +25,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }else {
                 print("done")
                 //Device Regi Just Once
-                let hasLaunchedKey = "HasLaunched"
-                let defaults = UserDefaults.standard
-                let hasLaunched = defaults.bool(forKey: hasLaunchedKey)
+//                let hasLaunchedKey = "HasLaunched"
+//                let defaults = UserDefaults.standard
+//                let hasLaunched = defaults.bool(forKey: hasLaunchedKey)
                 
-                if !hasLaunched {
+//                if !hasLaunched {
                     DataTag.DEVICE_TOKEN = deviceTokenString
                     SessionLogin().deviceRegister(deviceID: UIDevice.current.identifierForVendor!.uuidString.replacingOccurrences(of: "-", with: ""), completionHandler: {(isSuccess) -> Void in
                         if isSuccess {
                             print("done Device Regi")
-                            defaults.set(true, forKey: hasLaunchedKey)
+//                            defaults.set(true, forKey: hasLaunchedKey)
                         }else {
                             print("Fail Device Regi")
                         }
                     })
                     
-                }
+//                }
 
                 
             }
@@ -51,6 +51,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("APNs device token: \(deviceTokenString)")
         
         // Persist it in your backend in case it's new
+    }
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([UNNotificationPresentationOptions.alert,UNNotificationPresentationOptions.badge,UNNotificationPresentationOptions.sound])
     }
     // Called when APNs failed to register the device for push notifications
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
@@ -127,9 +131,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didReceiveRemoteNotification data: [AnyHashable : Any]) {
         // Print notification payload data
         print("Push notification received: \(data)")
-        UIApplication.shared.applicationIconBadgeNumber = 0
-        
+        let state = UIApplication.shared.applicationState
+        if state == UIApplicationState.active {
+            //show alert here your app is in foreground
+            print("State")
+//            let mViewController = ViewController()
+//            mViewController.reloadPushData(data: data)
+            if let rootViewController = window?.rootViewController as? UINavigationController {
+                if let viewController = rootViewController.viewControllers.first as? ViewController {
+                    viewController.reloadPushData(data: data)
+                }
+            }
+        }
+        else{
+            //your app is in background
+        }
     }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         initPlist()

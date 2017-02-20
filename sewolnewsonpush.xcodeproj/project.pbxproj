@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70DD8E221E5A77E700762180 /* ReportMsgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DD8E211E5A77E700762180 /* ReportMsgModel.swift */; };
 		70F433B21E441E4F00356145 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433B11E441E4F00356145 /* AppDelegate.swift */; };
 		70F433B41E441E4F00356145 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F433B31E441E4F00356145 /* ViewController.swift */; };
 		70F433B71E441E4F00356145 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F433B51E441E4F00356145 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		70DD8E211E5A77E700762180 /* ReportMsgModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportMsgModel.swift; sourceTree = "<group>"; };
 		70F433AE1E441E4F00356145 /* 뉴스온세월호.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "뉴스온세월호.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F433B11E441E4F00356145 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70F433B31E441E4F00356145 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				70F433E21E44213700356145 /* DataModel.swift */,
 				70F433E31E44213700356145 /* DataTag.swift */,
 				70F433EC1E44213700356145 /* SessionLogin.swift */,
+				70DD8E211E5A77E700762180 /* ReportMsgModel.swift */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				70F433F41E44213700356145 /* MainNomalCell.swift in Sources */,
 				70F433B21E441E4F00356145 /* AppDelegate.swift in Sources */,
 				70F433F81E44213700356145 /* SessionLogin.swift in Sources */,
+				70DD8E221E5A77E700762180 /* ReportMsgModel.swift in Sources */,
 				70F433F51E44213700356145 /* MainShortCell.swift in Sources */,
 				70F433F11E44213700356145 /* ImageViewController.swift in Sources */,
 				70F433F01E44213700356145 /* DataTag.swift in Sources */,

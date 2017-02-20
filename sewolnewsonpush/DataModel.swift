@@ -14,7 +14,7 @@ import Foundation
 
 class DataModel {
     func parseUrlJson(urlString : String, completionHandler : @escaping ((_ jsonData : [String : AnyObject]?) -> Void)){
-        let url = URL(string: "http://1.234.70.19:8080/SEWOL/mobile/linkUrl/search.do")
+        let url = URL(string: DataTag.URL_LINK)
         let request = URLRequest(url: url!)
         var postString : String = ""
         postString.append("url="+urlString)
@@ -53,19 +53,19 @@ class DataModel {
     }
     func parseJSONResults(completionHandler : @escaping ((_ jsonData : [String : AnyObject]?) -> Void)){
         //데이터를 파싱한다
-        let url = URL(string: "http://1.234.70.19:8080/SEWOL/mobile/chatting/searchMsg.do")
+        let url = URL(string: DataTag.URL_MSG)
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
         
         var postString : String = ""
         
-        postString.append("del_fl=N")
-        postString.append("&room_type=2")
-        postString.append("&chatting_room_id=1")
-        postString.append("order_by=A.id DESC")
-        postString.append("&mac_address=test")
-        postString.append("&limit=10")
-        postString.append("&offset=0")
+//        postString.append("del_fl=N")
+//        postString.append("&room_type=2")
+//        postString.append("&chatting_room_id=1")
+        //postString.append("&order_by=A.id DESC")
+//        postString.append("&mac_address=test")
+//        postString.append("&limit=10")
+//        postString.append("&offset=0")
 //        postString.append("&first_id=1")
 //        postString.append("&last_id=1")
         
@@ -101,7 +101,7 @@ class DataModel {
         return completionHandler(nil)
     }
     func parseJSONTotalCount(completionHandler : @escaping ((_ jsonData : [String : AnyObject]?) -> Void)){
-        let url = URL(string: "http://1.234.70.19:8080/SEWOL/mobile/user/searchCount.do")
+        let url = URL(string: DataTag.URL_NOTICE_COUNT)
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -137,7 +137,7 @@ class DataModel {
     }
     func parseJSONNotice(completionHandler : @escaping ((_ jsonData : [String : AnyObject]?) -> Void)){
         
-        let url = URL(string: "http://1.234.70.19:8080/SEWOL/mobile/chatting/searchNotice.do")
+        let url = URL(string: DataTag.URL_NOTICE)
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
         
